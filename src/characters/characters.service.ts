@@ -1,26 +1,19 @@
 import { Injectable } from '@nestjs/common';
-import { CreateCharacterDto } from './dto/create-character.dto';
-import { UpdateCharacterDto } from './dto/update-character.dto';
+import { PtBrService } from 'src/shared/pt-br.service';
+
+import { Character } from '../shared/character.entity';
 
 @Injectable()
 export class CharactersService {
-  create(createCharacterDto: CreateCharacterDto) {
-    return 'This action adds a new character';
+  async findAll(max = 50, start = 1): Promise<Character[]> {
+    return (await new PtBrService().getAll()).slice(start - 1, max);
   }
 
-  findAll() {
-    return `This action returns all characters`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} character`;
-  }
-
-  update(id: number, updateCharacterDto: UpdateCharacterDto) {
-    return `This action updates a #${id} character`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} character`;
+  async findOne(id: number): Promise<Character> {
+    return {
+      ...(await new PtBrService().getAll()).find(
+        ({ id: idInd }) => id === idInd,
+      ),
+    };
   }
 }
