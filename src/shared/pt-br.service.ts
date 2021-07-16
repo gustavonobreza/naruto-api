@@ -2,11 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { readFileSync } from 'fs';
 import { Character } from './character.entity';
 
-const sortByname = ({ name: a1 }, { name: a2 }) =>
-  a1 < a2 ? -1 : a1 > a2 ? 1 : 0;
-
-const sortById = ({ id: a1 }, { id: a2 }) => a1 - a2;
-
 @Injectable()
 export class PtBrService {
   async getAll(): Promise<Character[]> {

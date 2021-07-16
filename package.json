@@ -57,6 +57,7 @@
       "json",
       "ts"
     ],
+    "maxWorkers": "100%",
     "rootDir": "src",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
