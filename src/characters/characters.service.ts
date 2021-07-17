@@ -19,9 +19,27 @@ export class CharactersService {
     return limited;
   }
 
-  async findOne(id: number): Promise<Character> {
+  async findOneById(id: number): Promise<Character> {
     const allCharacter = await new PtBrService().getAll();
-    const find = allCharacter.find(({ id: idInd }) => id === idInd);
+    const find = allCharacter.find(({ id: _id }) => id === _id);
+
+    if (!find) {
+      throw new NotFoundException();
+    }
+
+    return {
+      ...find,
+    };
+  }
+  async findOneByName(name: string): Promise<Character> {
+    name.split(' ').length > 1 ? (name = name[0]) : (name = name);
+    const allCharacter = await new PtBrService().getAll();
+    const find = allCharacter.find(({ name: _name }) =>
+      _name
+        .toLowerCase()
+        .split(' ')
+        .some((namePart) => namePart === name.toLowerCase()),
+    );
 
     if (!find) {
       throw new NotFoundException();

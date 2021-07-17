@@ -12,6 +12,10 @@ export class CharactersController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    return await this.charactersService.findOne(+id);
+    const seachByName = !parseInt(id);
+    if (seachByName) {
+      return await this.charactersService.findOneByName(id);
+    }
+    return await this.charactersService.findOneById(parseInt(id));
   }
 }

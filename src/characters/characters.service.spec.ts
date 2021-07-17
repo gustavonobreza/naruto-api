@@ -1,4 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { Character } from '../shared/character.entity';
 import { CharactersService } from './characters.service';
 
 describe('CharactersService', () => {
@@ -14,5 +15,11 @@ describe('CharactersService', () => {
 
   it('should be defined', () => {
     expect(service).toBeDefined();
+  });
+
+  it('should return an array of characters', () => {
+    const getAll = service.findAll();
+
+    expect(getAll).toHaveProperty([{}] as Character[]);
   });
 });

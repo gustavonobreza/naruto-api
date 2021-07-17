@@ -6,7 +6,7 @@ import { Character } from './character.entity';
 export class PtBrService {
   async getAll(): Promise<Character[]> {
     const raw = await JSON.parse(
-      readFileSync('src/shared/data/pt-br-V2.json', {
+      readFileSync('src/shared/data/pt-br-V2a.json', {
         encoding: 'utf8',
       }).toString(),
     );
