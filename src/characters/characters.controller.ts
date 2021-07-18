@@ -37,9 +37,7 @@ export class CharactersController {
   @Get(':id')
   async findOne(@Param('id') id: string) {
     if (!isNumberString(id)) {
-      console.log('id >>', id);
-
-      throw new BadRequestException(['Invalid id', 'Id is numeric']);
+      throw new BadRequestException(['Invalid id.', 'Id is numeric.']);
     }
     return await this.charactersService.findOneById(parseInt(id));
   }
