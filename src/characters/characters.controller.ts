@@ -7,7 +7,7 @@ interface IQueryString {
   name?: string;
 }
 
-@Controller('characters')
+@Controller('/api/v1/characters')
 export class CharactersController {
   constructor(private readonly charactersService: CharactersService) {}
 
@@ -16,8 +16,8 @@ export class CharactersController {
     const { name } = query;
     const nameIsString = isString(name);
     const nameIsNumber = !!Number(name);
-    const haveNumberInString = someNumberInString(name);
     if (name) {
+      const haveNumberInString = someNumberInString(name);
       if (nameIsString && !nameIsNumber && !haveNumberInString) {
         const character = await this.charactersService.findOneByName(name);
         return character;

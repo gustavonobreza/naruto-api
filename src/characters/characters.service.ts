@@ -44,7 +44,7 @@ export class CharactersService {
     );
 
     if (!find) {
-      throw new NotFoundException();
+      throw new NotFoundException('Character');
     }
 
     return {
