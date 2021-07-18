@@ -1,5 +1,11 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
-import { isString } from 'class-validator';
+import {
+  BadRequestException,
+  Controller,
+  Get,
+  Param,
+  Query,
+} from '@nestjs/common';
+import { isNumberString, isString } from 'class-validator';
 import { someNumberInString } from 'src/shared/helper/some-number-in-string';
 import { CharactersService } from './characters.service';
 
@@ -30,9 +36,10 @@ export class CharactersController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    const seachByName = !parseInt(id);
-    if (seachByName) {
-      return await this.charactersService.findOneByName(id);
+    if (!isNumberString(id)) {
+      console.log('id >>', id);
+
+      throw new BadRequestException(['Invalid id', 'Id is numeric']);
     }
     return await this.charactersService.findOneById(parseInt(id));
   }
