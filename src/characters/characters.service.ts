@@ -32,13 +32,15 @@ export class CharactersService {
     };
   }
   async findOneByName(name: string): Promise<Character> {
-    name.split(' ').length > 1 ? (name = name[0]) : (name = name);
+    const sanitizedFirstName = (
+      name.split(' ').length > 1 ? name[0] : name
+    ).toLowerCase();
     const allCharacter = await new PtBrService().getAll();
     const find = allCharacter.find(({ name: _name }) =>
       _name
         .toLowerCase()
         .split(' ')
-        .some((namePart) => namePart === name.toLowerCase()),
+        .some((firstName) => firstName === sanitizedFirstName),
     );
 
     if (!find) {
