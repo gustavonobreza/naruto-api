@@ -1,6 +1,6 @@
 # Requirements
 ## Characters
-- [ ] Must have at least 80 characters in database;
+- [x] Must have at least 80 characters in database;
 - [x] Should be possible to search a character by name;
 - [x] Should be implemented a cache layer(lazy way);
 
