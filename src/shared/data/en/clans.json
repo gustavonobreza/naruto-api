@@ -1,0 +1,238 @@
+{
+  "clans": {
+    "Aburame Clan": {
+      "link": "https://naruto.fandom.com/wiki/Aburame_Clan",
+      "icon": ""
+    },
+    "Akimichi Clan": {
+      "link": "https://naruto.fandom.com/wiki/Akimichi_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/6/63/Akimichi_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110330225002"
+    },
+    "Amagiri Clan": {
+      "link": "https://naruto.fandom.com/wiki/Amagiri_Clan",
+      "icon": ""
+    },
+    "Chinoike Clan": {
+      "link": "https://naruto.fandom.com/wiki/Chinoike_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/3/38/Chinoike_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20160808154412"
+    },
+    "Fuma Clan": {
+      "link": "https://naruto.fandom.com/wiki/Fūma_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/3/32/F%C5%ABma_%28anime%29_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114143223"
+    },
+    "Fuma Clan (Land of Sound)": {
+      "link": "https://naruto.fandom.com/wiki/Fūma_Clan (Land of Sound)",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/3/32/F%C5%ABma_%28anime%29_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114143223"
+    },
+    "Hagoromo Clan": {
+      "link": "https://naruto.fandom.com/wiki/Hagoromo_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/7/7a/Hagoromo_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20101121181201"
+    },
+    "Hatake Clan": {
+      "link": "https://naruto.fandom.com/wiki/Hatake_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/a/ac/Hatake_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150509210734"
+    },
+    "Hirasaka Clan": {
+      "link": "https://naruto.fandom.com/wiki/Hirasaka_Clan",
+      "icon": ""
+    },
+    "Hoki Family": {
+      "link": "https://naruto.fandom.com/wiki/Hōki_Family",
+      "icon": ""
+    },
+    "Hoshigaki Clan": {
+      "link": "https://naruto.fandom.com/wiki/Hoshigaki_Clan",
+      "icon": ""
+    },
+    "Hozuki Clan": {
+      "link": "https://naruto.fandom.com/wiki/Hōzuki_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/9/9b/H%C5%8Dzuki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114133308"
+    },
+    "Hyuga Clan": {
+      "link": "https://naruto.fandom.com/wiki/Hyūga_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/a/a8/Hy%C5%ABga_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20210527014321"
+    },
+    "Iburi Clan": {
+      "link": "https://naruto.fandom.com/wiki/Iburi_Clan",
+      "icon": ""
+    },
+    "Inuzuka Clan": {
+      "link": "https://naruto.fandom.com/wiki/Inuzuka_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/1/17/Inuzuka_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150515013817"
+    },
+    "Jugo's Clan": {
+      "link": "https://naruto.fandom.com/wiki/Jūgo's_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/5/52/J%C5%ABgo%27s_Clan_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150416033246"
+    },
+    "Kagetsu Family": {
+      "link": "https://naruto.fandom.com/wiki/Kagetsu_Family",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/8/85/Kagetsu_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20140908182036"
+    },
+    "Kaguya Clan": {
+      "link": "https://naruto.fandom.com/wiki/Kaguya_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/7/7f/Kaguya_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20090407172955"
+    },
+    "Kamizuru Clan": {
+      "link": "https://naruto.fandom.com/wiki/Kamizuru_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/d/d5/Kamizuru_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114122815"
+    },
+    "Karatachi Family": {
+      "link": "https://naruto.fandom.com/wiki/Karatachi_Family",
+      "icon": ""
+    },
+    "Kazekage Clan": {
+      "link": "https://naruto.fandom.com/wiki/Kazekage_Clan",
+      "icon": ""
+    },
+    "Kedoin Clan": {
+      "link": "https://naruto.fandom.com/wiki/Kedōin_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/1/18/Ked%C5%8Din_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114122818"
+    },
+    "Kodon Clan": {
+      "link": "https://naruto.fandom.com/wiki/Kodon_Clan",
+      "icon": ""
+    },
+    "Kohaku Clan": {
+      "link": "https://naruto.fandom.com/wiki/Kohaku_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/f/fe/Kohaku_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110118132740"
+    },
+    "Kumanoi Clan": {
+      "link": "https://naruto.fandom.com/wiki/Kumanoi_Clan",
+      "icon": ""
+    },
+    "Kurama Clan": {
+      "link": "https://naruto.fandom.com/wiki/Kurama_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/d/db/Kurama_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20090829235615"
+    },
+    "Lee Clan": {
+      "link": "https://naruto.fandom.com/wiki/Lee_Clan",
+      "icon": ""
+    },
+    "Nara Clan": {
+      "link": "https://naruto.fandom.com/wiki/Nara_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/d/d5/Nara_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110330225002"
+    },
+    "Onikuma Clan": {
+      "link": "https://naruto.fandom.com/wiki/Onikuma_Clan",
+      "icon": ""
+    },
+    "Otsutsuki Clan": {
+      "link": "https://naruto.fandom.com/wiki/Ōtsutsuki_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/c/cb/%C5%8Ctsutsuki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20180407042123"
+    },
+    "Rinha Clan": {
+      "link": "https://naruto.fandom.com/wiki/Rinha_Clan",
+      "icon": ""
+    },
+    "Ryu Clan": {
+      "link": "https://naruto.fandom.com/wiki/Ryū_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/6/61/Ry%C5%AB_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20151005130603"
+    },
+    "Sarutobi Clan": {
+      "link": "https://naruto.fandom.com/wiki/Sarutobi_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/f/fb/Sarutobi_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150802153808"
+    },
+    "Sendo Clan": {
+      "link": "https://naruto.fandom.com/wiki/Sendō_Clan",
+      "icon": ""
+    },
+    "Senju Clan": {
+      "link": "https://naruto.fandom.com/wiki/Senju_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/8/8d/Senju_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20090302032847"
+    },
+    "Shiin Clan": {
+      "link": "https://naruto.fandom.com/wiki/Shiin_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/9/9c/Shiin_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110118132755"
+    },
+    "Shimura Clan": {
+      "link": "https://naruto.fandom.com/wiki/Shimura_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/c/c6/Shimura_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150416033258"
+    },
+    "Shirogane Clan": {
+      "link": "https://naruto.fandom.com/wiki/Shirogane_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/1/1a/Shirogane_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110118110351"
+    },
+    "Taketori Clan": {
+      "link": "https://naruto.fandom.com/wiki/Taketori_Clan",
+      "icon": ""
+    },
+    "Tenro Clan": {
+      "link": "https://naruto.fandom.com/wiki/Tenrō_Clan",
+      "icon": ""
+    },
+    "Tsuchigumo Clan": {
+      "link": "https://naruto.fandom.com/wiki/Tsuchigumo_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/0/09/Tsuchigumo_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20100714212105"
+    },
+    "Uchiha Clan": {
+      "link": "https://naruto.fandom.com/wiki/Uchiha_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/c/c3/Uchiha_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150323000713"
+    },
+    "Uzumaki Clan": {
+      "link": "https://naruto.fandom.com/wiki/Uzumaki_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/8/89/Uzumaki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20180407232103"
+    },
+    "Wagarashi Family": {
+      "link": "https://naruto.fandom.com/wiki/Wagarashi_Family",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/8/89/Wagarashi_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114122815"
+    },
+    "Wasabi Family": {
+      "link": "https://naruto.fandom.com/wiki/Wasabi_Family",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/e/e3/Wasabi_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20140616124025"
+    },
+    "Yamanaka Clan": {
+      "link": "https://naruto.fandom.com/wiki/Yamanaka_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/c/c9/Yamanaka_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110330225003"
+    },
+    "Yoimura Clan": {
+      "link": "https://naruto.fandom.com/wiki/Yoimura_Clan",
+      "icon": ""
+    },
+    "Yota's Clan": {
+      "link": "https://naruto.fandom.com/wiki/Yota's_Clan",
+      "icon": ""
+    },
+    "Yotsuki Clan": {
+      "link": "https://naruto.fandom.com/wiki/Yotsuki_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/6/66/Yotsuki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110118110246"
+    },
+    "Yuki Clan": {
+      "link": "https://naruto.fandom.com/wiki/Yuki_Clan",
+      "icon": "https://static.wikia.nocookie.net/naruto/images/4/40/Yuki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114142340"
+    }
+  },
+  "icons": {
+    "Aburame": "https://static.wikia.nocookie.net/naruto/images/e/e1/Aburame_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150802160958",
+    "Akimichi": "https://static.wikia.nocookie.net/naruto/images/6/63/Akimichi_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110330225002",
+    "Chinoike": "https://static.wikia.nocookie.net/naruto/images/3/38/Chinoike_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20160808154412",
+    "Fuma": "https://static.wikia.nocookie.net/naruto/images/3/32/F%C5%ABma_%28anime%29_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114143223",
+    "Hagoromo": "https://static.wikia.nocookie.net/naruto/images/7/7a/Hagoromo_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20101121181201",
+    "Hatake": "https://static.wikia.nocookie.net/naruto/images/a/ac/Hatake_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150509210734",
+    "Hozuki": "https://static.wikia.nocookie.net/naruto/images/9/9b/H%C5%8Dzuki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114133308",
+    "Hyuga": "https://static.wikia.nocookie.net/naruto/images/a/a8/Hy%C5%ABga_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20210527014321",
+    "Inuzuka": "https://static.wikia.nocookie.net/naruto/images/1/17/Inuzuka_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150515013817",
+    "Jugo's": "https://static.wikia.nocookie.net/naruto/images/5/52/J%C5%ABgo%27s_Clan_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150416033246",
+    "Kagetsu": "https://static.wikia.nocookie.net/naruto/images/8/85/Kagetsu_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20140908182036",
+    "Kaguya": "https://static.wikia.nocookie.net/naruto/images/7/7f/Kaguya_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20090407172955",
+    "Kamizuru": "https://static.wikia.nocookie.net/naruto/images/d/d5/Kamizuru_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114122815",
+    "Kedoin": "https://static.wikia.nocookie.net/naruto/images/1/18/Ked%C5%8Din_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114122818",
+    "Kohaku": "https://static.wikia.nocookie.net/naruto/images/f/fe/Kohaku_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110118132740",
+    "Kurama": "https://static.wikia.nocookie.net/naruto/images/d/db/Kurama_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20090829235615",
+    "Nara": "https://static.wikia.nocookie.net/naruto/images/d/d5/Nara_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110330225002",
+    "Otsutsuki": "https://static.wikia.nocookie.net/naruto/images/c/cb/%C5%8Ctsutsuki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20180407042123",
+    "Ryu": "https://static.wikia.nocookie.net/naruto/images/6/61/Ry%C5%AB_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20151005130603",
+    "Sarutobi": "https://static.wikia.nocookie.net/naruto/images/f/fb/Sarutobi_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150802153808",
+    "Senju": "https://static.wikia.nocookie.net/naruto/images/8/8d/Senju_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20090302032847",
+    "Shiin": "https://static.wikia.nocookie.net/naruto/images/9/9c/Shiin_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110118132755",
+    "Shimura": "https://static.wikia.nocookie.net/naruto/images/c/c6/Shimura_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150416033258",
+    "Shirogane": "https://static.wikia.nocookie.net/naruto/images/1/1a/Shirogane_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110118110351",
+    "Tsuchigumo": "https://static.wikia.nocookie.net/naruto/images/0/09/Tsuchigumo_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20100714212105",
+    "Uchiha": "https://static.wikia.nocookie.net/naruto/images/c/c3/Uchiha_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20150323000713",
+    "Uzumaki": "https://static.wikia.nocookie.net/naruto/images/8/89/Uzumaki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20180407232103",
+    "Wagarashi": "https://static.wikia.nocookie.net/naruto/images/8/89/Wagarashi_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114122815",
+    "Wasabi": "https://static.wikia.nocookie.net/naruto/images/e/e3/Wasabi_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20140616124025",
+    "Yamanaka": "https://static.wikia.nocookie.net/naruto/images/c/c9/Yamanaka_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110330225003",
+    "Yotsuki": "https://static.wikia.nocookie.net/naruto/images/6/66/Yotsuki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110118110246",
+    "Yuki": "https://static.wikia.nocookie.net/naruto/images/4/40/Yuki_Symbol.svg/revision/latest/scale-to-width-down/70?cb=20110114142340"
+  }
+}

@@ -9,7 +9,7 @@ export class PtBrService {
   async getAll(): Promise<Character[]> {
     if (!cache) {
       const raw = await JSON.parse(
-        readFileSync('src/shared/data/pt-br-V2a.json', {
+        readFileSync('src/shared/data/pt/V3.json', {
           encoding: 'utf8',
         }).toString(),
       );

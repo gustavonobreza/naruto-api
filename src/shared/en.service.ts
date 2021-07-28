@@ -6,7 +6,7 @@ import { resolve } from 'path';
 export class EnService {
   async getAll() {
     const json = await JSON.parse(
-      readFileSync(resolve(__dirname, 'data', 'en-V2.json'), {
+      readFileSync('src/shared/data/en/en_V3.json', {
         encoding: 'utf8',
       }),
     );
