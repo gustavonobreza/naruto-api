@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { Character } from '../shared/character.entity';
+import { Character } from './character.entity';
 import { CharactersService } from './characters.service';
 
 describe('CharactersService', () => {

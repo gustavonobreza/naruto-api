@@ -1,44 +1,52 @@
-import {
-  BadRequestException,
-  Controller,
-  Get,
-  Param,
-  Query,
-} from '@nestjs/common';
-import { isNumberString, isString } from 'class-validator';
-import { someNumberInString } from 'src/shared/helper/some-number-in-string';
-import { CharactersService } from './characters.service';
+import { Controller, Get, Param, Query } from '@nestjs/common';
+import { isNumberString } from 'class-validator';
 
-interface IQueryString {
-  name?: string;
-}
+import { serializeStringToInteger } from 'src/shared/helper/serialize-string-numeric';
+import { isValidString } from 'src/shared/helper/is-valid-string';
+import { CharactersService } from './characters.service';
 
 @Controller('/api/v1/characters')
 export class CharactersController {
   constructor(private readonly charactersService: CharactersService) {}
 
   @Get()
-  async findAll(@Query() query: IQueryString) {
-    const { name } = query;
-    const nameIsString = isString(name);
-    const nameIsNumber = !!Number(name);
+  async findAll(
+    @Query('name') name: string,
+    @Query('offset') offset: string,
+    @Query('limit') limit: string,
+  ) {
     if (name) {
-      const haveNumberInString = someNumberInString(name);
-      if (nameIsString && !nameIsNumber && !haveNumberInString) {
-        const character = await this.charactersService.findOneByName(name);
-        return character;
-      }
+      console.log('name in query ->', name);
+
+      return await this.findOne(name);
     }
 
-    const characters = await this.charactersService.findAll();
+    const offsetSerialized = serializeStringToInteger(offset);
+    const limitSerialized = serializeStringToInteger(limit);
+
+    const characters = await this.charactersService.findAll({
+      offset: offsetSerialized,
+      limit: limitSerialized,
+    });
+
     return characters;
   }
 
-  @Get(':id')
-  async findOne(@Param('id') id: string) {
-    if (!isNumberString(id)) {
-      throw new BadRequestException(['Invalid id.', 'Id is numeric.']);
+  @Get(':index')
+  async findOne(@Param('index') index: string) {
+    const isNumeric = isNumberString(index);
+
+    if (isNumeric) {
+      const id = Number(index);
+      return await this.charactersService.findOneById(id);
     }
-    return await this.charactersService.findOneById(parseInt(id));
+
+    const isValidName = isValidString(index);
+    if (isValidName) {
+      const name = index.trim();
+      console.log('para tuduuu =>', name);
+
+      return await this.charactersService.findByName(name);
+    }
   }
 }

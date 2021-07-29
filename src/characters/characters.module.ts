@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+
 import { CharactersService } from './characters.service';
 import { CharactersController } from './characters.controller';
 import { PtBrService } from 'src/shared/pt-br.service';

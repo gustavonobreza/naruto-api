@@ -32,5 +32,4 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-src/shared/data/pt/safe.js
-src/shared/data/en/safe.js
+**/transformers/*.js

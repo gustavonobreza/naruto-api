@@ -1,54 +1,112 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { PtBrService } from 'src/shared/pt-br.service';
 
-import { Character } from '../shared/character.entity';
+import { PtBrService as PTService } from 'src/shared/pt-br.service';
+import { Character } from './character.entity';
 
-// const sortByName = ({ name: a1 }, { name: a2 }) =>
-//   a1 < a2 ? -1 : a1 > a2 ? 1 : 0;
-
-// const sortById = ({ id: a1 }, { id: a2 }) => a1 - a2;
-const start = 0;
-const limit = 100;
+const _offset = 0;
+const _limit = 100;
 
 @Injectable()
 export class CharactersService {
-  async findAll(): Promise<Character[]> {
-    const allCharacter = await new PtBrService().getAll();
-    const limited = allCharacter.slice(start, limit);
+  private readonly dataService: PTService = new PTService();
+
+  async findAll({
+    offset,
+    limit,
+  }: {
+    offset?: number;
+    limit?: number;
+  } = {}): Promise<Character[]> {
+    offset = offset ?? _offset;
+    limit = limit ?? _limit;
+
+    const allCharacter = await this.dataService.getAll();
+    const skip = allCharacter.slice(offset, allCharacter.length - 1);
+    const limited = skip.slice(0, limit);
 
     return limited;
   }
 
   async findOneById(id: number): Promise<Character> {
-    const allCharacter = await new PtBrService().getAll();
-    const find = allCharacter.find(({ id: _id }) => id === _id);
+    const character = await this.dataService.getById(id);
 
-    if (!find) {
-      throw new NotFoundException();
+    if (!character) {
+      throw new NotFoundException('Character not found');
     }
 
-    return {
-      ...find,
-    };
+    return character;
   }
-  async findOneByName(name: string): Promise<Character> {
-    const sanitizedFirstName = (
-      name.split(' ').length > 1 ? name[0] : name
-    ).toLowerCase();
-    const allCharacter = await new PtBrService().getAll();
-    const find = allCharacter.find(({ name: _name }) =>
-      _name
-        .toLowerCase()
-        .split(' ')
-        .some((firstName) => firstName === sanitizedFirstName),
+
+  async findByName(name: string): Promise<Character[]> {
+    const normalizedName = name.split(' ').map((name) =>
+      name
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase(),
     );
 
-    if (!find) {
-      throw new NotFoundException('Character');
+    const all = await this.findAll();
+
+    const normalizedNames = all.map(({ name }, id): [number, string] => [
+      id,
+      name
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase(),
+    ]);
+
+    let exatlyMatchId: any;
+    const scores = [];
+    const alternatives = [];
+
+    for (let i = 0; i < normalizedNames.length; i++) {
+      const [id, name] = normalizedNames[i];
+
+      let points = 0;
+
+      if (name.toLowerCase() === normalizedName.join(' ')) {
+        exatlyMatchId = id;
+        break;
+      }
+
+      const splittedNames = name.split(' ');
+
+      normalizedName.forEach((_name) => {
+        const includes = splittedNames.filter(
+          (__name) => __name === _name,
+        ).length;
+        if (includes) points++;
+      });
+
+      if (points > 0) {
+        console.log(name, 'e', normalizedName.join(' '));
+        scores.push({ points, id });
+      }
+
+      normalizedName.forEach((_name) => {
+        const includes = splittedNames.filter((__name) =>
+          __name.match(_name),
+        ).length;
+        if (includes) {
+          alternatives.push(id);
+        }
+      });
     }
 
-    return {
-      ...find,
-    };
+    const semiMatch = scores.map(({ id }) => all[id]);
+    const alternativeMatch = alternatives.map((alt) => all[alt]);
+
+    const find =
+      exatlyMatchId + 10
+        ? [all[exatlyMatchId]]
+        : semiMatch.length
+        ? semiMatch
+        : alternativeMatch;
+
+    if (!find.length) {
+      throw new NotFoundException('Character not found');
+    }
+
+    return find;
   }
 }
