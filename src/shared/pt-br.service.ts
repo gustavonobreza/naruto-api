@@ -13,7 +13,7 @@ export class PtBrService {
   async getAll(): Promise<Character[]> {
     if (!cache.getAll) {
       const raw = await JSON.parse(
-        readFileSync('src/shared/data/pt/prod-V3a.json').toString(),
+        readFileSync('src/shared/data/pt/prod-V4.json').toString(),
       );
       cache.getAll = raw.data;
     }

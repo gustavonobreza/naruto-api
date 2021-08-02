@@ -7,6 +7,7 @@ export class Character {
   info?: Info;
   about: string[];
   images: string[];
+  page?: string;
 }
 
 type Info = { [key: string]: string };
