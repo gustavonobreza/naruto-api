@@ -4,8 +4,8 @@ export function normalize(s: string) {
   return r;
 }
 
-const i = 'Jūgo',
-  j = 'Mei Terumī',
-  l = 'Hiashi Hyūga';
+// const i = 'Jūgo',
+//   j = 'Mei Terumī',
+//   l = 'Hiashi Hyūga';
 
-console.log(normalize(i), normalize(j), normalize(l));
+// console.log(normalize(i), normalize(j), normalize(l));

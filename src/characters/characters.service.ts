@@ -79,7 +79,7 @@ export class CharactersService {
       });
 
       if (points > 0) {
-        console.log(name, 'e', normalizedName.join(' '));
+        // console.log(name, 'e', normalizedName.join(' '));
         scores.push({ points, id });
       }
 
