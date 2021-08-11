@@ -1,4 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { data as raw } from './data/pt/prod-V5.json';
+import { join } from 'path';
 
 import { Character } from '../characters/character.entity';
 
@@ -11,8 +13,7 @@ const cache: { getAll: Character[]; getById: Character[] } = {
 export class PtBrService {
   async getAll(): Promise<Character[]> {
     if (!cache.getAll) {
-      const raw = require('src/shared/data/pt/prod-V4.json');
-      cache.getAll = raw.data;
+      cache.getAll = raw;
     }
 
     return cache.getAll;
