@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { data as raw } from './data/pt/prod-V5.json';
+import { data as raw } from './data/pt/prod-V5a.json';
 
 import { Character } from '../characters/character.entity';
 
