@@ -15,10 +15,11 @@
 - [ ] Should be return the history;
 
 # To Test
-- [ ] Which is better: readFileSync or a cache(redis)? - To read JSON;
+- [x] Which is better: readFileSync or a cache(redis)? - To read JSON;
+  __No one these, use require instead readFileSync and use cache in a varialble;__
 
 # Questions
-- [ ] I think that is needed donwload the images and make myself links, because sometimes the url return 404 code. I tried to remove cb query of the urls but it makes no difference;
+- [x] I think that is needed donwload the images and make myself links, because sometimes the url return 404 code. I tried to remove cb query of the urls but it makes no difference;
 
 # Todo
 - [ ] 
