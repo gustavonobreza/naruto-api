@@ -16,7 +16,7 @@
 
 # To Test
 - [x] Which is better: readFileSync or a cache(redis)? - To read JSON;
-  __No one these, use require instead readFileSync and use cache in a varialble;__
+  __No one these, use require instead readFileSync and use cache in a variable;__
 
 # Questions
 - [x] I think that is needed donwload the images and make myself links, because sometimes the url return 404 code. I tried to remove cb query of the urls but it makes no difference;
