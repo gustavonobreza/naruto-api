@@ -1,4 +1,6 @@
 # Requirements
+- [ ] Documentation of API.
+
 ## Characters
 - [x] Must have at least 80 characters in database;
 - [x] Should be possible to search a character by name;
@@ -14,7 +16,7 @@
 - [ ] Should be possible to search a biju by id;
 - [ ] Should be return the history;
 
-# To Test
+# To test
 - [x] Which is better: readFileSync or a cache(redis)? - To read JSON;
   __No one these, use require instead readFileSync and use cache in a variable;__
 
