@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { readFileSync } from 'fs';
 
 import { Character } from '../characters/character.entity';
 
