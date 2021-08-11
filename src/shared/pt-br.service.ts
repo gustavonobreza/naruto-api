@@ -15,24 +15,6 @@ export class PtBrService {
       cache.getAll = raw;
     }
 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return cache.getAll;
   }
 
