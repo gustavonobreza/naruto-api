@@ -75,5 +75,11 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "",
+      "pre-push": "npm run lint && npm run format"
+    }
   }
 }
