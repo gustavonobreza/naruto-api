@@ -1,8 +1,14 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  HttpStatus,
+  HttpException,
+  Param,
+  Query,
+} from '@nestjs/common';
 import { isNumberString } from 'class-validator';
 
 import { serializeStringToInteger } from 'src/shared/helper/serialize-string-numeric';
-import { isValidString } from 'src/shared/helper/is-valid-string';
 import { CharactersService } from './characters.service';
 
 @Controller('/api/v1/characters')
@@ -16,9 +22,7 @@ export class CharactersController {
     @Query('limit') limit: string,
   ) {
     if (name) {
-      console.log('name in query ->', name);
-
-      return await this.findOne(name);
+      return await this.charactersService.findByName(name);
     }
 
     const offsetSerialized = serializeStringToInteger(offset);
@@ -41,12 +45,6 @@ export class CharactersController {
       return await this.charactersService.findOneById(id);
     }
 
-    const isValidName = isValidString(index);
-    if (isValidName) {
-      const name = index.trim();
-      console.log('para tuduuu =>', name);
-
-      return await this.charactersService.findByName(name);
-    }
+    throw new HttpException('Invalid id', HttpStatus.BAD_REQUEST);
   }
 }

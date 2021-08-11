@@ -1,6 +1,3 @@
-import { Optional } from '@nestjs/common';
-import { IsNotEmpty, IsString } from 'class-validator';
-
 export class Character {
   id: number;
   name: string;
@@ -11,10 +8,3 @@ export class Character {
 }
 
 type Info = { [key: string]: string };
-
-export class IQueryString {
-  @IsString({ message: 'Name is invalid in query' })
-  @IsNotEmpty()
-  @Optional()
-  name?: string;
-}
