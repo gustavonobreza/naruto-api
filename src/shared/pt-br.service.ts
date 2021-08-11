@@ -12,9 +12,7 @@ const cache: { getAll: Character[]; getById: Character[] } = {
 export class PtBrService {
   async getAll(): Promise<Character[]> {
     if (!cache.getAll) {
-      const raw = await JSON.parse(
-        readFileSync('src/shared/data/pt/prod-V4.json').toString(),
-      );
+      const raw = require('src/shared/data/pt/prod-V4.json');
       cache.getAll = raw.data;
     }
 
