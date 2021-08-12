@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { data as rawCharacters } from './data/pt/prod-V5b.json';
 
 import { Character } from '../characters/character.entity';
+import { data as rawCharacters } from './data/pt/prod-V5b.json';
+
 import { Clan } from 'src/clans/clan.entity';
 import { data as rawClans } from './data/pt/clans-prod.json';
 
