@@ -7,8 +7,8 @@
 - [x] Should be implemented a cache layer(lazy way);
 
 ## Clans
-- [ ] Should be possible to search a clan by name;
-- [ ] Should be possible to search a clan by id;
+- [x] Should be possible to search a clan by name;
+- [x] Should be possible to search a clan by id;
 - [ ] Should be return the history of the clan and its members;
 
 ## Bijus
