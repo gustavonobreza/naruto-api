@@ -4,6 +4,6 @@ import { ClansController } from './clans.controller';
 
 @Module({
   controllers: [ClansController],
-  providers: [ClansService]
+  providers: [ClansService],
 })
 export class ClansModule {}
