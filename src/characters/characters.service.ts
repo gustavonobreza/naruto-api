@@ -20,7 +20,7 @@ export class CharactersService {
     offset = offset ?? _offset;
     limit = limit ?? _limit;
 
-    const allCharacter = await this.dataService.getAll();
+    const allCharacter = await this.dataService.getAllCharacters();
     const skip = allCharacter.slice(offset, allCharacter.length - 1);
     const limited = skip.slice(0, limit);
 
@@ -28,7 +28,7 @@ export class CharactersService {
   }
 
   async findOneById(id: number): Promise<Character> {
-    const character = await this.dataService.getById(id);
+    const character = await this.dataService.getCharacterById(id);
 
     if (!character) {
       throw new NotFoundException('Character not found');

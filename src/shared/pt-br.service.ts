@@ -10,7 +10,7 @@ const cache: { getAll: Character[]; getById: Character[] } = {
 
 @Injectable()
 export class PtBrService {
-  async getAll(): Promise<Character[]> {
+  async getAllCharacters(): Promise<Character[]> {
     if (!cache.getAll) {
       cache.getAll = raw;
     }
@@ -18,11 +18,11 @@ export class PtBrService {
     return cache.getAll;
   }
 
-  async getById(id: number): Promise<Character> {
+  async getCharacterById(id: number): Promise<Character> {
     const userInCache = cache.getById.find(({ id: _id }) => _id === id);
     if (userInCache) return userInCache;
 
-    const all = await this.getAll();
+    const all = await this.getAllCharacters();
     const user = all.find(({ id: _id }) => _id === id);
 
     if (user) {
