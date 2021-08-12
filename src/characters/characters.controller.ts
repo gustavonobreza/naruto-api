@@ -1,4 +1,11 @@
-import { Controller, Get, Param, Query, ParseIntPipe } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Param,
+  Query,
+  ParseIntPipe,
+  ParseBoolPipe,
+} from '@nestjs/common';
 
 import { serializeStringToInteger } from 'src/shared/helper/serialize-string-numeric';
 import { CharactersService } from './characters.service';
@@ -12,11 +19,15 @@ export class CharactersController {
     @Query('name') name: string,
     @Query('offset') offset: string,
     @Query('limit') limit: string,
+    @Query('sort', ParseBoolPipe) sort: boolean,
   ) {
     if (name) {
       return await this.charactersService.findByName(name);
     }
 
+    if (sort) {
+      return await this.charactersService.sortPopulars();
+    }
     const offsetSerialized = serializeStringToInteger(offset);
     const limitSerialized = serializeStringToInteger(limit);
 

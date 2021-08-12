@@ -109,4 +109,8 @@ export class CharactersService {
 
     return find;
   }
+
+  async sortPopulars(): Promise<Character[]> {
+    return await this.dataService.getByPopularity();
+  }
 }

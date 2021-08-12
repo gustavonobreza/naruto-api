@@ -53,6 +53,42 @@ export class PtBrService {
     return cache.getAllClans;
   }
 
+  async getByPopularity(): Promise<Character[]> {
+    const all = await this.getAllCharacters();
+
+    const principles: Character[] = [];
+
+    function getPupular(gname: string) {
+      const found = all.find(({ name: _name }) => {
+        return _name.toLowerCase().includes(gname.toLowerCase());
+      });
+      principles.push(found);
+    }
+
+    const selected = [
+      'Naruto',
+      'Sakura',
+      'Sasuke',
+      'Kakashi',
+      'Maito',
+      'Lee',
+      'Hinata',
+      'Shikamaru',
+      'Temari',
+      'Neji',
+    ];
+
+    selected.forEach((name) => getPupular(name));
+
+    all.forEach((char) => {
+      const found = principles.some(({ id: _id }) => char.id === _id);
+      if (!found) {
+        principles.push(char);
+      }
+    });
+
+    return principles;
+  }
   async getClanById(id: number): Promise<Clan> {
     const clanInCache = cache.getClanById.find(({ id: _id }) => _id === id);
     if (clanInCache) {
