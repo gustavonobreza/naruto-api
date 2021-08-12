@@ -19,7 +19,7 @@ export class CharactersController {
     @Query('name') name: string,
     @Query('offset') offset: string,
     @Query('limit') limit: string,
-    @Query('sort', ParseBoolPipe) sort: boolean,
+    @Query('sort', ParseBoolPipe) sort: boolean = false,
   ) {
     if (name) {
       return await this.charactersService.findByName(name);
