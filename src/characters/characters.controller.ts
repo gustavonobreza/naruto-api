@@ -19,13 +19,13 @@ export class CharactersController {
     @Query('name') name: string,
     @Query('offset') offset: string,
     @Query('limit') limit: string,
-    @Query('sort', ParseBoolPipe) sort: boolean = false,
+    @Query('sort') sort: string = 'false',
   ) {
     if (name) {
       return await this.charactersService.findByName(name);
     }
 
-    if (sort) {
+    if (sort === 'true') {
       return await this.charactersService.sortPopulars();
     }
     const offsetSerialized = serializeStringToInteger(offset);
