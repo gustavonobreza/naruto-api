@@ -1,14 +1,8 @@
-import {
-  Controller,
-  Get,
-  Param,
-  Query,
-  ParseIntPipe,
-  ParseBoolPipe,
-} from '@nestjs/common';
+import { Controller, Get, Param, Query, ParseIntPipe } from '@nestjs/common';
+import { isBooleanString } from 'class-validator';
 
 import { serializeStringToInteger } from 'src/shared/helper/serialize-string-numeric';
-import { CharactersService } from './characters.service';
+import { CharactersService, IQuery } from './characters.service';
 
 @Controller('/api/v1/characters')
 export class CharactersController {
@@ -19,22 +13,23 @@ export class CharactersController {
     @Query('name') name: string,
     @Query('offset') offset: string,
     @Query('limit') limit: string,
-    @Query('sort') sort: string = 'false',
+    @Query('sort') sort: string,
   ) {
+    const isSorted = isBooleanString(sort);
+    const query: IQuery = {
+      offset: serializeStringToInteger(offset),
+      limit: serializeStringToInteger(limit),
+    };
+
     if (name) {
       return await this.charactersService.findByName(name);
     }
 
-    if (sort === 'true') {
-      return await this.charactersService.sortPopulars();
+    if (isSorted) {
+      return await this.charactersService.sortPopulars(query);
     }
-    const offsetSerialized = serializeStringToInteger(offset);
-    const limitSerialized = serializeStringToInteger(limit);
 
-    const characters = await this.charactersService.findAll({
-      offset: offsetSerialized,
-      limit: limitSerialized,
-    });
+    const characters = await this.charactersService.findAll(query);
 
     return characters;
   }

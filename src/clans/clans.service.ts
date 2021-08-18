@@ -3,7 +3,7 @@ import { PtBrService } from 'src/shared/pt-br.service';
 import { Clan } from './clan.entity';
 
 const _offset = 0;
-const _limit = 100;
+const _limit = 50;
 
 @Injectable()
 export class ClansService {

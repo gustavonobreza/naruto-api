@@ -4,19 +4,18 @@ import { PtBrService as PTService } from 'src/shared/pt-br.service';
 import { Character } from './character.entity';
 
 const _offset = 0;
-const _limit = 100;
+const _limit = 50;
+
+export type IQuery = {
+  offset?: number;
+  limit?: number;
+};
 
 @Injectable()
 export class CharactersService {
   private readonly dataService: PTService = new PTService();
 
-  async findAll({
-    offset,
-    limit,
-  }: {
-    offset?: number;
-    limit?: number;
-  } = {}): Promise<Character[]> {
+  async findAll({ offset, limit }: IQuery = {}): Promise<Character[]> {
     offset = offset ?? _offset;
     limit = limit ?? _limit;
 
@@ -110,7 +109,14 @@ export class CharactersService {
     return find;
   }
 
-  async sortPopulars(): Promise<Character[]> {
-    return await this.dataService.getByPopularity();
+  async sortPopulars({ offset, limit }: IQuery = {}): Promise<Character[]> {
+    offset = offset ?? _offset;
+    limit = limit ?? _limit;
+
+    const allCharacter = await this.dataService.getByPopularity();
+    const skip = allCharacter.slice(offset, allCharacter.length - 1);
+    const limited = skip.slice(0, limit);
+
+    return limited;
   }
 }
