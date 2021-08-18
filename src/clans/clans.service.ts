@@ -16,8 +16,8 @@ export class ClansService {
     offset?: number;
     limit?: number;
   } = {}): Promise<Clan[]> {
-    offset = offset ?? _offset;
-    limit = limit ?? _limit;
+    offset ??= _offset;
+    limit ??= _limit;
 
     const allClans = await this.dataService.getAllClans();
     const skip = allClans.slice(offset, allClans.length - 1);

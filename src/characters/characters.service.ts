@@ -16,8 +16,8 @@ export class CharactersService {
   private readonly dataService: PTService = new PTService();
 
   async findAll({ offset, limit }: IQuery = {}): Promise<Character[]> {
-    offset = offset ?? _offset;
-    limit = limit ?? _limit;
+    offset ??= _offset;
+    limit ??= _limit;
 
     const allCharacter = await this.dataService.getAllCharacters();
     const skip = allCharacter.slice(offset, allCharacter.length - 1);
@@ -110,8 +110,8 @@ export class CharactersService {
   }
 
   async sortPopulars({ offset, limit }: IQuery = {}): Promise<Character[]> {
-    offset = offset ?? _offset;
-    limit = limit ?? _limit;
+    offset ??= _offset;
+    limit ??= _limit;
 
     const allCharacter = await this.dataService.getByPopularity();
     const skip = allCharacter.slice(offset, allCharacter.length - 1);
