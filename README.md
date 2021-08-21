@@ -24,13 +24,13 @@
 
 ## Description
 
-An api to fetch data about Naruto's (and Boruto's) anime and manga. With a short resume of history of life of each character.
+An api to fetch data about Naruto's (and Boruto's) anime and manga. With a short resume of history of life, a table of more specific information and image(s) of each character.
 
 ## Links
-### <a href="https://gustavonobreza.github.io/naruto-api/" target="_blank">Home Page</a>
-### <a href="https://naruto-dex.vercel.app/" target="_blank">Frontend</a>
-### <a href="https://naruto-api.herokuapp.com/" target="_blank">API</a>
 
+### <a href="https://gustavonobreza.github.io/naruto-api/" target="_blank">Home Page</a>
+### <a href="https://naruto-dex.vercel.app/" target="_blank">Frontend (DEMO)</a> / <a href="https://github.com/Gustavonobreza/narutodex" target="_blank">Frontend (REPO)</a>
+### <a href="https://naruto-api.herokuapp.com/" target="_blank">API</a>
 
 ## Installation
 
