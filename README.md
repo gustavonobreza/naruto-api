@@ -30,7 +30,7 @@ API to fetch data about Naruto (and Boruto) anime and manga. With a short resume
 
 ### <a href="https://gustavonobreza.github.io/naruto-api/" target="_blank">Home Page</a>
 ### <a href="https://naruto-dex.vercel.app/" target="_blank">Frontend (DEMO)</a> / <a href="https://github.com/Gustavonobreza/narutodex" target="_blank">Frontend (REPO)</a>
-### <a href="https://naruto-api.herokuapp.com/" target="_blank">API</a>
+### <a href="https://naruto-api.herokuapp.com/" target="_blank">API / <a href="https://github.com/Gustavonobreza/naruto-api" target="_blank">API (REPO)</a>
 
 ## Installation
 
