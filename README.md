@@ -24,7 +24,7 @@
 
 ## Description
 
-An api to fetch data about Naruto's (and Boruto's) anime and manga. With a short resume of history of life, a table of more specific information and image(s) of each character.
+API to fetch data about Naruto (and Boruto) anime and manga. With a short resume of history of life,  images and a table of more specific information of each character.
 
 ## Links
 
