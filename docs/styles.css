@@ -6,26 +6,36 @@
 
 html {
   max-width: 80vw;
-  margin: 5vh 10vw 5vh 6vw;
+  margin: 5vh 7vw 5vh 7vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 h1 {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-size: 2em;
   font-weight: bold;
+  color: rgb(34, 102, 158);
 }
 
 h2 {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   width: 100%;
   color: rgb(224, 167, 44);
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
   background-color: beige;
   margin: 15px 0;
   padding: 5px 5px 5px 10px;
   border-radius: 10px;
+}
+
+a {
+  color: rgb(23, 23, 230);
+  text-decoration: none; /* no underline */
+}
+
+li {
+  font-size: 17px;
 }
