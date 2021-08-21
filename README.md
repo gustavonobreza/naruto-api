@@ -24,7 +24,13 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+An api to fetch data about Naruto's (and Boruto's) anime and manga. With a short resume of history of life of each character.
+
+## Links
+### <a href="https://gustavonobreza.github.io/naruto-api/" target="_blank">Home Page</a>
+### <a href="https://naruto-dex.vercel.app/" target="_blank">Frontend</a>
+### <a href="https://naruto-api.herokuapp.com/" target="_blank">API</a>
+
 
 ## Installation
 
