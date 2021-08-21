@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 80vw;
+  margin: 5vh 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Roboto';
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Roboto';
+  width: 100%;
+  color: rgb(224, 167, 44);
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: beige;
+  margin: 15px 0;
+  padding: 5px;
+}
