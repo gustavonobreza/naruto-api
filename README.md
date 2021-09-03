@@ -26,6 +26,8 @@
 
 API to fetch data about Naruto (and Boruto) anime and manga. With a short resume of history of life,  images and a table of more specific information of each character.
 
+#### It's deployed on Heroku -> <a href="https://naruto-api.herokuapp.com/" target="_blank" >https://naruto-api.herokuapp.com/</a>
+
 ## Links
 
 ### <a href="https://gustavonobreza.github.io/naruto-api/" target="_blank">Home Page</a>
