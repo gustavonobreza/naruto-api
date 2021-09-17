@@ -21,6 +21,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+<<<<<<< HEAD
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -29,3 +30,23 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+=======
+    
+    - uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 6.0.2
+    
+    - run: pnpm i
+    - run: pnpm run build --if-present
+    - run: pnpm test
+
+#     - uses: actions/checkout@v2
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v2
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#         cache: 'npm'
+#     - run: npm ci
+#     - run: npm run build --if-present
+#     - run: npm test
+>>>>>>> parent of c7f91b4... chore: fix pnpm implementation
