@@ -63,5 +63,5 @@ $ pnpm test
 $ pnpm test:e2e
 
 # test coverage
-$ npm test:cov
+$ pnpm test:cov
 ```
