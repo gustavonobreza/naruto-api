@@ -65,3 +65,11 @@ $ pnpm test:e2e
 # test coverage
 $ pnpm test:cov
 ```
+
+## Source
+
+This app use from behind a json file generated using a crawler from **Narutopedia**. All the information is from there, photos (more information at [#Photos](/#Photos) ), articles, tables, and so on.
+  
+## Photos
+
+When using the Narutopedia link, I was having some bugs so I downloaded all the photos and served using supabase.
