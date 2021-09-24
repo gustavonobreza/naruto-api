@@ -75,3 +75,13 @@ This app use from behind a json file generated using a crawler from **Narutopedi
 ## Photos
 
 When using the Narutopedia link, I was having some bugs so I downloaded all the photos and served using supabase.
+  
+## Paths
+ 
+|   Path  	|     Source     	| Method 	|       Respose       	| Queries 	|
+|:-------:	|:--------------:	|:------:	|:-------------------:	|:-------:	|
+| /api/v1 	|   characters   	|   GET  	|    All characters   	|   soon  	|
+| /api/v1 	| characters/:id 	|   GET  	| One character by id 	|    --   	|
+| /api/v1 	|      clans     	|   GET  	|      All clans      	|   soon  	|
+| /api/v1 	|    clans/:id   	|   GET  	|    One clan by id   	|    --   	|
+| /api/v1 	|      bijus     	|   GET  	|      All bijus      	|    --   	|
