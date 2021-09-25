@@ -9,4 +9,4 @@ import { ClansModule } from './clans/clans.module';
   controllers: [AppController],
   providers: [],
 })
-export class AppModule { }
+export class AppModule {}

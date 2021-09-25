@@ -1,5 +1,4 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-
 import { PtBrService as PTService } from 'src/shared/pt-br.service';
 import { Character } from './character.entity';
 

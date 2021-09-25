@@ -4,6 +4,6 @@ import { BijusService } from './bijus.service';
 
 @Module({
   controllers: [BijusController],
-  providers: [BijusService]
+  providers: [BijusService],
 })
 export class BijusModule {}
