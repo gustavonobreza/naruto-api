@@ -11,7 +11,7 @@ environment:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm ci
+  - npm install
 
 test_script:
   # Output useful info for debugging.
