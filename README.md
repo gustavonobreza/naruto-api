@@ -85,3 +85,4 @@ When using the Narutopedia link, I was having some bugs so I downloaded all the 
 | /api/v1 	|      clans     	|   GET  	|      All clans      	|   soon  	|
 | /api/v1 	|    clans/:id   	|   GET  	|    One clan by id   	|    --   	|
 | /api/v1 	|      bijus     	|   GET  	|      All bijus      	|    --   	|
+<br>
