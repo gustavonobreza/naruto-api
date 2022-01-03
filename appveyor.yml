@@ -7,9 +7,6 @@ environment:
     - nodejs_version: "14"
     - nodejs_version: "16"
 
-cache:
-  - node_modules
-
 install:
   - ps: Install-Product node $env:nodejs_version
   - npm i -g pnpm
