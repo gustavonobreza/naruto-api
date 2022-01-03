@@ -5,19 +5,18 @@ version: "{build}"
 
 environment:
   matrix:
-    - nodejs_version: "12"
     - nodejs_version: "14"
     - nodejs_version: "16"
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm install
+  - npm i -g pnpm
 
 test_script:
   # Output useful info for debugging.
   - node --version
-  - npm --version
+  - pnpm --version
   # run tests
-  - npm test
+  - pnpm test
 
 build: off
