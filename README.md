@@ -9,8 +9,8 @@
     <img src="https://ci.appveyor.com/api/projects/status/github/gustavonobreza/naruto-api?svg=true" alt="Build status: Passing" />
   <a href="https://github.com/gustavonobreza/naruto-api/actions" alt="Build status: Passing">
     <img src="https://github.com/gustavonobreza/naruto-api/actions/workflows/node.js.yml/badge.svg" alt="Build status: Passing">
-    </a>
-
+  </a>
+  <img src="https://heroku-badge.herokuapp.com/?app=naruto-api" alt="Deploy status: OK"/>
 </p>
 
 ## Description
