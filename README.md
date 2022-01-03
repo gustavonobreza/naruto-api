@@ -1,8 +1,12 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+  <a href="https://nodejs.org/en/" target="_blank"> <img alt="NodeJS" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/nodejs/nodejs-original.svg"/></a>
+ <a target="_blank" href="https://nestjs.com/" target="_blank"> <img alt="NestJS" width="100px" src="https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg" /></a>
+  <a target="_blank" href="https://www.typescriptlang.org/" target="_blank"> <img alt="TypeScript" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/typescript/typescript-original.svg"/></a>
+  <a href="https://www.heroku.com" target="_blank"> <img alt="Heroku" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/00f02ef57fb7601fd1ddcc2fe6fe670fef3ae3e4/icons/heroku/heroku-plain.svg"/></a>
+</p>
 
-<img src="https://ci.appveyor.com/api/projects/status/github/gustavonobreza/naruto-api?svg=true" alt="Build status: Passing" />
-
+<p align="center">
+  <img src="https://ci.appveyor.com/api/projects/status/github/gustavonobreza/naruto-api?svg=true" alt="Build status: Passing" />
 </p>
 
 ## Description
