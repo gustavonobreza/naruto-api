@@ -10,7 +10,7 @@
   <a href="https://github.com/gustavonobreza/naruto-api/actions" alt="Build status: Passing">
     <img src="https://github.com/gustavonobreza/naruto-api/actions/workflows/node.js.yml/badge.svg" alt="Build status: Passing">
   </a>
-  <img src="https://heroku-badge.herokuapp.com/?app=naruto-api&style=flat" alt="Deploy status: OK"/>
+  <img src="https://heroku-badge.herokuapp.com/?app=naruto-api&style=flat&svg=1" alt="Deploy status: OK"/>
 </p>
 
 ## Description
