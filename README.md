@@ -18,7 +18,7 @@ API to fetch data about Naruto (and Boruto) anime and manga. With a short resume
 
 ## Deploy
 
-It's deployed on Heroku: <a href="https://naruto-api.fly.dev/" target="_blank" >https://naruto-api.fly.dev/>/a>
+It's deployed on Heroku: <a href="https://naruto-api.fly.dev/" target="_blank" >https://naruto-api.fly.dev/</a>
 
 ## Links
 
