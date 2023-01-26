@@ -10,7 +10,6 @@
   <a href="https://github.com/gustavonobreza/naruto-api/actions" alt="Build status: Passing">
     <img src="https://github.com/gustavonobreza/naruto-api/actions/workflows/node.js.yml/badge.svg" alt="Build status: Passing">
   </a>
-  <img src="https://heroku-badge.herokuapp.com/?app=naruto-api&style=flat&svg=1" alt="Deploy status: OK"/>
 </p>
 
 ## Description
@@ -19,7 +18,7 @@ API to fetch data about Naruto (and Boruto) anime and manga. With a short resume
 
 ## Deploy
 
-It's deployed on Heroku: <a href="https://naruto-api.herokuapp.com/" target="_blank" >https://naruto-api.herokuapp.com/</a>
+It's deployed on Heroku: <a href="https://naruto-api.fly.dev/" target="_blank" >https://naruto-api.fly.dev//a>
 
 ## Links
 
@@ -27,7 +26,7 @@ It's deployed on Heroku: <a href="https://naruto-api.herokuapp.com/" target="_bl
 
 ### <a href="https://naruto-dex.vercel.app/" target="_blank">Frontend (DEMO)</a> / <a href="https://github.com/Gustavonobreza/narutodex" target="_blank">Frontend (REPO)</a>
 
-### <a href="https://naruto-api.herokuapp.com/" target="_blank">API / <a href="https://github.com/Gustavonobreza/naruto-api" target="_blank">API (REPO)</a>
+### <a href="https://naruto-api.fly.dev/" target="_blank">API / <a href="https://github.com/Gustavonobreza/naruto-api" target="_blank">API (REPO)</a>
 
 ## Installation
 
