@@ -2,7 +2,7 @@
   <a href="https://nodejs.org/en/" target="_blank"> <img alt="NodeJS" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/nodejs/nodejs-original.svg"/></a>
  <a target="_blank" href="https://nestjs.com/" target="_blank"> <img alt="NestJS" width="100px" src="https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg" /></a>
   <a target="_blank" href="https://www.typescriptlang.org/" target="_blank"> <img alt="TypeScript" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/typescript/typescript-original.svg"/></a>
-  <a href="https://www.heroku.com" target="_blank"> <img alt="Heroku" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/00f02ef57fb7601fd1ddcc2fe6fe670fef3ae3e4/icons/heroku/heroku-plain.svg"/></a>
+  <a href="https://fly.io" target="_blank"> <img alt="FlyIO" width="100px" src="https://fly.io/static/images/fly-social-square.jpg"/></a>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@ API to fetch data about Naruto (and Boruto) anime and manga. With a short resume
 
 ## Deploy
 
-It's deployed on Heroku: <a href="https://naruto-api.herokuapp.com/" target="_blank" >https://naruto-api.herokuapp.com/</a>
+It's deployed on Heroku: <a href="https://naruto-api.fly.dev/" target="_blank" >https://naruto-api.fly.dev/</a>
 
 ## Links
 
@@ -27,7 +27,7 @@ It's deployed on Heroku: <a href="https://naruto-api.herokuapp.com/" target="_bl
 
 ### <a href="https://naruto-dex.vercel.app/" target="_blank">Frontend (DEMO)</a> / <a href="https://github.com/Gustavonobreza/narutodex" target="_blank">Frontend (REPO)</a>
 
-### <a href="https://naruto-api.herokuapp.com/" target="_blank">API / <a href="https://github.com/Gustavonobreza/naruto-api" target="_blank">API (REPO)</a>
+### <a href="https://naruto-api.fly.dev/" target="_blank">API / <a href="https://github.com/Gustavonobreza/naruto-api" target="_blank">API (REPO)</a>
 
 ## Installation
 
