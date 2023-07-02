@@ -1,16 +1,16 @@
 # http://www.appveyor.com/docs/appveyor-yml
 
-version: "{build}"
+version: '{build}'
 
 environment:
   matrix:
-    - nodejs_version: "14"
-    - nodejs_version: "16"
+    - nodejs_version: '14'
+    - nodejs_version: '16'
 
 install:
   - ps: Install-Product node $env:nodejs_version
   - npm i -g pnpm
-  - pnpm i --frozen-lockfile	
+  - pnpm i --frozen-lockfile
 
 test_script:
   # Output useful info for debugging.

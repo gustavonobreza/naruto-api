@@ -7,9 +7,7 @@
       "protocol": "inspector",
       "restart": true,
       "name": "Launch Program",
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "skipFiles": ["<node_internals>/**"]
     }
   ]
 }

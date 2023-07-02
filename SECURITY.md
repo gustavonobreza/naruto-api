@@ -7,9 +7,8 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| All   | :white_check_mark: |
-
+| All     | :white_check_mark: |
 
 ## Reporting a Vulnerability
- 
+
 To make a reporting of a bug or vulnerability, just send the report to the email gustavoalexandredev@gmail.com
