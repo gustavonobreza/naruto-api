@@ -12,6 +12,10 @@
   </a>
 </p>
 
+
+<p align="center"> <img src="./docs/assets/caution.png" alt="caution" width="150px"/> </p>
+<b>The project was changed from Heroku to fly.io !!! <br> Outdated link --> <a>https://naruto-api.heroku.app/api</a> /// new link --> <a>https://naruto-api.fly.dev/</a></b>
+
 ## Description
 
 API to fetch data about Naruto (and Boruto) anime and manga. With a short resume of history of life, images and a table of more specific information of each character.
