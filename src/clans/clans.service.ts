@@ -1,4 +1,4 @@
-import { PtBrService } from 'src/shared/pt-br.service';
+import { PtBrService } from '../shared/pt-br.service';
 import { Clan } from './clan.entity';
 
 const _offset = 0;
