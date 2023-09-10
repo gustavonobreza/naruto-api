@@ -24,9 +24,9 @@ export class CharactersController {
 
     return characters;
   }
-  // async findOne(@Param('index', ParseIntPipe) index: number) {
-  //   return await this.charactersService.findOneById(index);
-  // }
+  async findOne(index: number) {
+    return await this.charactersService.findOneById(index);
+  }
 }
 
 type IQuerystring = {
@@ -43,6 +43,16 @@ export function charactersController(app: FastifyInstance, opts, done) {
     const all = await characters.findAll({ limit, name, offset, sort });
 
     reply.code(200).send(all);
+  });
+  app.get('/:id', async (req, reply) => {
+    // id = index
+    const { id } = req.params as { id?: string };
+    const isIndex = isNaN(parseInt(id));
+    if (!isIndex) {
+      // BadRequest
+      return reply.code(300).send('BadRequest');
+    }
+    return characters.findOne(+id);
   });
   done();
 }
