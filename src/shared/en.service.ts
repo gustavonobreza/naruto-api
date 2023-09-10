@@ -1,7 +1,5 @@
-import { Injectable } from '@nestjs/common';
 import { readFileSync } from 'fs';
 
-@Injectable()
 export class EnService {
   async getAll() {
     const json = await JSON.parse(
