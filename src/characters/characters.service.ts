@@ -1,5 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { PtBrService as PTService } from 'src/shared/pt-br.service';
+import { PtBrService as PTService } from '../shared/pt-br.service';
 import { Character } from './character.entity';
 
 const _offset = 0;
@@ -10,7 +9,6 @@ export type IQuery = {
   limit?: number;
 };
 
-@Injectable()
 export class CharactersService {
   private readonly dataService: PTService = new PTService();
 
@@ -25,11 +23,12 @@ export class CharactersService {
     return limited;
   }
 
-  async findOneById(id: number): Promise<Character> {
+  async findOneById(id: number): Promise<Character> | null {
     const character = await this.dataService.getCharacterById(id);
 
     if (!character) {
-      throw new NotFoundException('Character not found');
+      // throw new NotFoundException('Character not found');
+      return null;
     }
 
     return character;
@@ -53,7 +52,7 @@ export class CharactersService {
         .toLowerCase(),
     ]);
 
-    let exatlyMatchId: any;
+    let exactlyMatchId: number;
     const scores = [];
     const alternatives = [];
 
@@ -63,7 +62,7 @@ export class CharactersService {
       let points = 0;
 
       if (name.toLowerCase() === normalizedName.join(' ')) {
-        exatlyMatchId = id;
+        exactlyMatchId = id;
         break;
       }
 
@@ -95,20 +94,21 @@ export class CharactersService {
     const alternativeMatch = alternatives.map((alt) => all[alt]);
 
     const find =
-      exatlyMatchId + 10
-        ? [all[exatlyMatchId]]
+      exactlyMatchId + 10
+        ? [all[exactlyMatchId]]
         : semiMatch.length
         ? semiMatch
         : alternativeMatch;
 
     if (!find.length) {
-      throw new NotFoundException('Character not found');
+      // throw new NotFoundException('Character not found');
+      return null;
     }
 
     return find;
   }
 
-  async sortPopulars({ offset, limit }: IQuery = {}): Promise<Character[]> {
+  async sortPopular({ offset, limit }: IQuery = {}): Promise<Character[]> {
     offset ??= _offset;
     limit ??= _limit;
 

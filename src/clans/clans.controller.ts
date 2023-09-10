@@ -1,17 +1,17 @@
-import { Controller, Get, Param, ParseIntPipe, Query } from '@nestjs/common';
-import { serializeStringToInteger } from 'src/shared/helper/serialize-string-numeric';
+import { serializeStringToInteger } from '../shared/helper/serialize-string-numeric';
 import { ClansService } from './clans.service';
+import { FastifyInstance } from 'fastify';
 
-@Controller('/api/v1/clans')
+interface IQuerystring {
+  name?: string;
+  offset?: string;
+  limit?: string;
+}
+
 export class ClansController {
   constructor(private readonly clansService: ClansService) {}
 
-  @Get()
-  async findAll(
-    @Query('name') name: string,
-    @Query('offset') offset: string,
-    @Query('limit') limit: string,
-  ) {
+  async findAll({ limit, name, offset }: IQuerystring) {
     if (name) {
       return await this.clansService.findByName(name);
     }
@@ -27,8 +27,28 @@ export class ClansController {
     return clans;
   }
 
-  @Get(':id')
-  findOne(@Param('id', ParseIntPipe) id: number) {
+  findOne(id: number) {
     return this.clansService.findOneById(id);
   }
+}
+
+export function clansController(app: FastifyInstance, opts, done) {
+  const clans = new ClansController(new ClansService());
+  app.get<{ Querystring: IQuerystring }>('/', async (req, reply) => {
+    const { name, offset, limit } = req.query;
+    const all = await clans.findAll({ limit, name, offset });
+
+    reply.code(200).send(all);
+  });
+  app.get('/:id', async (req, reply) => {
+    // id = index
+    const { id } = req.params as { id?: string };
+    const isIndex = isNaN(parseInt(id));
+    if (!isIndex) {
+      // BadRequest
+      return reply.code(300).send('BadRequest');
+    }
+    return clans.findOne(+id);
+  });
+  done();
 }
