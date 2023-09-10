@@ -12,9 +12,12 @@
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "fastify": "^4.22.2",
     "rimraf": "^5.0.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.17",
     "@types/node": "^20.3.3",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
