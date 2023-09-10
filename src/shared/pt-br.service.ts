@@ -1,5 +1,3 @@
-import { Injectable } from '@nestjs/common';
-
 import { Character } from '../characters/character.entity';
 import { data as rawCharacters } from './data/pt/prod-V5b.json';
 
@@ -17,8 +15,6 @@ const cache: {
   getAllClans: null,
   getClanById: [],
 };
-
-@Injectable()
 export class PtBrService {
   async getAllCharacters(): Promise<Character[]> {
     if (!cache.getAllCharacters) {

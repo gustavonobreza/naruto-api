@@ -1,10 +1,7 @@
-import { Controller, Get, Redirect } from '@nestjs/common';
+import { FastifyInstance } from 'fastify';
 
-@Controller()
-export class AppController {
-  @Get()
-  @Redirect('/api/v1/characters')
-  redirect() {
-    return {};
-  }
+export function home(app: FastifyInstance) {
+  app.get('/', (_, reply) => {
+    reply.redirect(303, 'api/v1/characters');
+  });
 }

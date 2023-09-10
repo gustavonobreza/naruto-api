@@ -1,11 +1,9 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
 import { PtBrService } from 'src/shared/pt-br.service';
 import { Clan } from './clan.entity';
 
 const _offset = 0;
 const _limit = 50;
 
-@Injectable()
 export class ClansService {
   private readonly dataService: PtBrService = new PtBrService();
 
@@ -26,11 +24,12 @@ export class ClansService {
     return limited;
   }
 
-  async findOneById(id: number): Promise<Clan> {
+  async findOneById(id: number): Promise<Clan> | null {
     const clan = await this.dataService.getClanById(id);
 
     if (!clan) {
-      throw new NotFoundException('Clan not found');
+      // throw new NotFoundException('Clan not found');
+      return null;
     }
 
     return clan;
@@ -54,7 +53,7 @@ export class ClansService {
         .toLowerCase(),
     ]);
 
-    let exatlyMatchId: any;
+    let exactlyMatchId: any;
     const scores = [];
     const alternatives = [];
 
@@ -64,7 +63,7 @@ export class ClansService {
       let points = 0;
 
       if (name.toLowerCase() === normalizedName.join(' ')) {
-        exatlyMatchId = id;
+        exactlyMatchId = id;
         break;
       }
 
@@ -95,14 +94,16 @@ export class ClansService {
     const alternativeMatch = alternatives.map((alt) => all[alt]);
 
     const find =
-      exatlyMatchId + 10
-        ? [all[exatlyMatchId]]
+      exactlyMatchId + 10
+        ? [all[exactlyMatchId]]
         : semiMatch.length
         ? semiMatch
         : alternativeMatch;
 
     if (!find.length) {
-      throw new NotFoundException('Clan not found');
+      // throw new NotFoundException('Clan not found');
+
+      return [];
     }
 
     return find;
