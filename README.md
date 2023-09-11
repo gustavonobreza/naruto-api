@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://nodejs.org/en/" target="_blank"> <img alt="NodeJS" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/nodejs/nodejs-original.svg"/></a>
  
-  <a target="_blank" href="https://www.typescriptlang.org/" target="_blank"> <img alt="TypeScript" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/typescript/typescript-original.svg"/></a>
+  <!-- <a target="_blank" href="https://www.typescriptlang.org/" target="_blank"> <img alt="TypeScript" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/typescript/typescript-original.svg"/></a>
   <a href="https://fly.io/" target="_blank"> <img alt="FlyIO" width="100px" src="./docs/assets/fly-io.svg"/></a>
-</p>
+</p> -->
 
 <p align="center">
     <img src="https://ci.appveyor.com/api/projects/status/github/gustavonobreza/naruto-api?svg=true" alt="Build status: Passing" />
@@ -14,7 +14,7 @@
 
 
 <p align="center"> <img src="./docs/assets/caution.png" alt="caution" width="150px"/> </p>
-<b>The project was changed from Heroku to fly.io !!! <br> Outdated link --> <a>https://naruto-api.heroku.app/api</a> /// new link --> <a>https://naruto-api.fly.dev/</a></b>
+<b>The project was changed from Heroku to Render !!! <br> Outdated link --> <a>https://naruto-api.heroku.app/api</a> /// new link --> <a>https://naruto-api-rsl3.onrender.com/</a></b>
 
 ## Description
 
@@ -23,7 +23,7 @@ API to fetch data about Naruto (and Boruto) anime and manga. With a short resume
 ## Deploy
 
 
-It's deployed on Fly.io: <a href="https://naruto-api.fly.dev/" target="_blank" >https://naruto-api.fly.dev/</a>
+It's deployed on Render: <a href="https://naruto-api-rsl3.onrender.com/" target="_blank" >https://naruto-api-rsl3.onrender.com/</a>
 
 
 
@@ -33,7 +33,7 @@ It's deployed on Fly.io: <a href="https://naruto-api.fly.dev/" target="_blank" >
 
 ### <a href="https://naruto-dex.vercel.app/" target="_blank">Frontend (DEMO)</a> / <a href="https://github.com/Gustavonobreza/narutodex" target="_blank">Frontend (REPO)</a>
 
-### <a href="https://naruto-api.fly.dev/" target="_blank">API / <a href="https://github.com/Gustavonobreza/naruto-api" target="_blank">API (REPO)</a>
+### <a href="https://naruto-api-rsl3.onrender.com/" target="_blank">API / <a href="https://github.com/Gustavonobreza/naruto-api" target="_blank">API (REPO)</a>
 
 ## Installation
 
