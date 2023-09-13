@@ -77,7 +77,7 @@ When using the Narutopedia link, I was having some bugs so I downloaded all the 
 
 ## Paths
 
-|  Path   |     Source     | Method |       Respose       | Queries |
+|  Path   |     Source     | Method |       Response       | Queries |
 | :-----: | :------------: | :----: | :-----------------: | :-----: |
 | /api/v1 |   characters   |  GET   |   All characters    |  soon   |
 | /api/v1 | characters/:id |  GET   | One character by id |   --    |
