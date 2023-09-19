@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://nodejs.org/en/" target="_blank"> <img alt="NodeJS" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/nodejs/nodejs-original.svg"/></a>
- 
+
   <!-- <a target="_blank" href="https://www.typescriptlang.org/" target="_blank"> <img alt="TypeScript" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/typescript/typescript-original.svg"/></a>
   <a href="https://fly.io/" target="_blank"> <img alt="FlyIO" width="100px" src="./docs/assets/fly-io.svg"/></a>
 </p> -->
@@ -12,7 +12,6 @@
   </a>
 </p>
 
-
 <p align="center"> <img src="./docs/assets/caution.png" alt="caution" width="150px"/> </p>
 <b>The project was changed from Heroku to Render !!! <br> Outdated link --> <a>https://naruto-api.heroku.app/api</a> /// new link --> <a>https://naruto-api-rsl3.onrender.com/</a></b>
 
@@ -22,10 +21,7 @@ API to fetch data about Naruto (and Boruto) anime and manga. With a short resume
 
 ## Deploy
 
-
 It's deployed on Render: <a href="https://naruto-api-rsl3.onrender.com/" target="_blank" >https://naruto-api-rsl3.onrender.com/</a>
-
-
 
 ## Links
 
@@ -38,7 +34,7 @@ It's deployed on Render: <a href="https://naruto-api-rsl3.onrender.com/" target=
 ## Installation
 
 ```bash
-$ pnpm install
+pnpm install
 ```
 
 ## Running the app
@@ -77,7 +73,7 @@ When using the Narutopedia link, I was having some bugs so I downloaded all the 
 
 ## Paths
 
-|  Path   |     Source     | Method |       Response       | Queries |
+|  Path   |     Source     | Method |      Response       | Queries |
 | :-----: | :------------: | :----: | :-----------------: | :-----: |
 | /api/v1 |   characters   |  GET   |   All characters    |  soon   |
 | /api/v1 | characters/:id |  GET   | One character by id |   --    |
