@@ -97,8 +97,8 @@ export class ClansService {
       exactlyMatchId + 10
         ? [all[exactlyMatchId]]
         : semiMatch.length
-        ? semiMatch
-        : alternativeMatch;
+          ? semiMatch
+          : alternativeMatch;
 
     if (!find.length) {
       // throw new NotFoundException('Clan not found');

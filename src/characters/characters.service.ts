@@ -97,8 +97,8 @@ export class CharactersService {
       exactlyMatchId + 10
         ? [all[exactlyMatchId]]
         : semiMatch.length
-        ? semiMatch
-        : alternativeMatch;
+          ? semiMatch
+          : alternativeMatch;
 
     if (!find.length) {
       // throw new NotFoundException('Character not found');
