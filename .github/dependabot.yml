@@ -5,7 +5,16 @@
 
 version: 2
 updates:
-  - package-ecosystem: 'npm' # See documentation for possible values
+  - package-ecosystem: 'pnpm' # See documentation for possible values
     directory: '/' # Location of package manifests
     schedule:
       interval: 'weekly'
+    commit-message:
+      # Prefix all commit messages with "npm: "
+      prefix: "npm"
+        # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # Workflow files stored in the default location of `.github/workflows`. (You don't need to specify `/.github/workflows` for `directory`. You can use `directory: "/"`.)
+    directory: "/"
+    schedule:
+      interval: "weekly"
