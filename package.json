@@ -5,26 +5,26 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
+    "check": "tsc -w --noEmit",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node dist/src/main.js",
-    "start:dev": "tsnd src/main.ts",
-    "start:prod": "node dist/src/main.js",
+    "start:dev": "tsnd --respawn --transpile-only src/main.ts",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "echo 'no tests!'"
   },
   "dependencies": {
     "@fastify/cors": "^8.4.2",
-    "fastify": "^4.24.3",
+    "fastify": "^4.25.1",
     "rimraf": "^5.0.5"
   },
   "devDependencies": {
     "@tsconfig/node21": "^21.0.0",
     "@types/express": "^4.17.21",
     "@types/node": "^20.10.4",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.55.0",
-    "eslint-config-prettier": "^8.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.1.1",
     "ts-node": "^10.9.2",
