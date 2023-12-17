@@ -1,11 +1,10 @@
 {
+  "extends": "@tsconfig/node21/tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
     "declaration": true,
     "removeComments": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "target": "ES2020",
+    "allowSyntheticDefaultImports": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true

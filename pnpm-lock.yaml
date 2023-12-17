@@ -16,6 +16,9 @@ dependencies:
     version: 5.0.5
 
 devDependencies:
+  '@tsconfig/node21':
+    specifier: ^21.0.0
+    version: 21.0.0
   '@types/express':
     specifier: ^4.17.21
     version: 4.17.21
@@ -235,6 +238,10 @@ packages:
 
   /@tsconfig/node16@1.0.3:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
+    dev: true
+
+  /@tsconfig/node21@21.0.0:
+    resolution: {integrity: sha512-fMySImjI1muKEV1JAFZfBlgSjLE8EeqNRmdcdyUWDenXyCvWjSE1oGM/nK6ob1fV+lAYlJhhC1b2nrjnDQCOhQ==}
     dev: true
 
   /@types/body-parser@1.19.2:
