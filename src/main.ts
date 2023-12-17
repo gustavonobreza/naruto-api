@@ -1,8 +1,8 @@
 import cors from '@fastify/cors';
 import fastify from 'fastify';
-import { charactersController } from './characters/characters.controller';
-import { clansController } from './clans/clans.controller';
-import { homeController } from './home.controller';
+import { charactersController } from './api/characters/characters.controller';
+import { clansController } from './api/clans/clans.controller';
+import { homeController } from './api/home.controller';
 
 async function bootstrap() {
   const app = fastify({ logger: true });

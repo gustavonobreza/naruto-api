@@ -1,8 +1,8 @@
-import { Character } from '../characters/character.entity';
-import { data as rawCharacters } from './data/pt/prod-V5b.json';
+import { Character } from '../api/characters/character.entity';
+import { data as rawCharacters } from './data/pt/characters.json';
 
-import { Clan } from 'src/clans/clan.entity';
-import { data as rawClans } from './data/pt/clans-prod.json';
+import { Clan } from 'src/api/clans/clan.entity';
+import { data as rawClans } from './data/pt/clans.json';
 
 type ICache = {
   characters: Character[];

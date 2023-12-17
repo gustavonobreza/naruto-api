@@ -1,40 +1,41 @@
-import { PtBrService as PTService } from '../shared/pt-br.service';
-import { Character } from './character.entity';
+import { PtBrService } from '../../shared/pt-br.service';
+import { Clan } from './clan.entity';
 
 const _offset = 0;
 const _limit = 50;
 
-export type IQuery = {
-  offset?: number;
-  limit?: number;
-};
+export class ClansService {
+  private readonly dataService: PtBrService = new PtBrService();
 
-export class CharactersService {
-  private readonly dataService: PTService = new PTService();
-
-  async findAll({ offset, limit }: IQuery = {}): Promise<Character[]> {
+  async findAll({
+    offset,
+    limit,
+  }: {
+    offset?: number;
+    limit?: number;
+  } = {}): Promise<Clan[]> {
     offset ??= _offset;
     limit ??= _limit;
 
-    const allCharacter = await this.dataService.getAllCharacters();
-    const skip = allCharacter.slice(offset, allCharacter.length - 1);
+    const allClans = await this.dataService.getAllClans();
+    const skip = allClans.slice(offset, allClans.length - 1);
     const limited = skip.slice(0, limit);
 
     return limited;
   }
 
-  async findOneById(id: number): Promise<Character | null> {
-    const character = await this.dataService.getCharacterById(id);
+  async findOneById(id: number): Promise<Clan | null> {
+    const clan = await this.dataService.getClanById(id);
 
-    if (!character) {
-      // throw new NotFoundException('Character not found');
+    if (!clan) {
+      // throw new NotFoundException('Clan not found');
       return null;
     }
 
-    return character;
+    return clan;
   }
 
-  async findByName(name: string): Promise<Character[]> {
+  async findByName(name: string): Promise<Clan[]> {
     const normalizedName = name.split(' ').map((name) =>
       name
         .normalize('NFD')
@@ -52,10 +53,9 @@ export class CharactersService {
         .toLowerCase(),
     ]);
 
-    let exactlyMatchId: number | undefined;
-    // ????
+    let exactlyMatchId: any;
     const scores = [];
-    const alternatives: any[] = [];
+    const alternatives: number[] = [];
 
     for (let i = 0; i < normalizedNames.length; i++) {
       const [id, name] = normalizedNames[i];
@@ -77,7 +77,6 @@ export class CharactersService {
       });
 
       if (points > 0) {
-        // console.log(name, 'e', normalizedName.join(' '));
         scores.push({ points, id });
       }
 
@@ -95,28 +94,18 @@ export class CharactersService {
     const alternativeMatch = alternatives.map((alt) => all[alt]);
 
     const find =
-      (exactlyMatchId as number) + 10
-        ? [all[exactlyMatchId as number]]
+      exactlyMatchId + 10
+        ? [all[exactlyMatchId]]
         : semiMatch.length
           ? semiMatch
           : alternativeMatch;
 
     if (!find.length) {
-      // NotFoundException
-      return Promise.reject(new Error('Character not found'));
+      // throw new NotFoundException('Clan not found');
+
+      return [];
     }
 
     return find;
-  }
-
-  async sortPopular({ offset, limit }: IQuery = {}): Promise<Character[]> {
-    offset ??= _offset;
-    limit ??= _limit;
-
-    const allCharacter = await this.dataService.getByPopularity();
-    const skip = allCharacter.slice(offset, allCharacter.length - 1);
-    const limited = skip.slice(0, limit);
-
-    return limited;
   }
 }

@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { serializeStringToInteger } from '../shared/helper/serialize-string-numeric';
+import { serializeStringToInteger } from '../../shared/helper/serialize-string-numeric';
 import { CharactersService, IQuery } from './characters.service';
 
 export class CharactersController {
