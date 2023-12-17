@@ -24,7 +24,7 @@ export class ClansService {
     return limited;
   }
 
-  async findOneById(id: number): Promise<Clan> | null {
+  async findOneById(id: number): Promise<Clan | null> {
     const clan = await this.dataService.getClanById(id);
 
     if (!clan) {
@@ -55,7 +55,7 @@ export class ClansService {
 
     let exactlyMatchId: any;
     const scores = [];
-    const alternatives = [];
+    const alternatives: number[] = [];
 
     for (let i = 0; i < normalizedNames.length; i++) {
       const [id, name] = normalizedNames[i];

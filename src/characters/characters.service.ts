@@ -23,7 +23,7 @@ export class CharactersService {
     return limited;
   }
 
-  async findOneById(id: number): Promise<Character> | null {
+  async findOneById(id: number): Promise<Character | null> {
     const character = await this.dataService.getCharacterById(id);
 
     if (!character) {
@@ -52,9 +52,10 @@ export class CharactersService {
         .toLowerCase(),
     ]);
 
-    let exactlyMatchId: number;
+    let exactlyMatchId: number | undefined;
+    // ????
     const scores = [];
-    const alternatives = [];
+    const alternatives: any[] = [];
 
     for (let i = 0; i < normalizedNames.length; i++) {
       const [id, name] = normalizedNames[i];
@@ -94,15 +95,15 @@ export class CharactersService {
     const alternativeMatch = alternatives.map((alt) => all[alt]);
 
     const find =
-      exactlyMatchId + 10
-        ? [all[exactlyMatchId]]
+      (exactlyMatchId as number) + 10
+        ? [all[exactlyMatchId as number]]
         : semiMatch.length
           ? semiMatch
           : alternativeMatch;
 
     if (!find.length) {
-      // throw new NotFoundException('Character not found');
-      return null;
+      // NotFoundException
+      return Promise.reject(new Error('Character not found'));
     }
 
     return find;

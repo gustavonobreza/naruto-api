@@ -1,8 +1,9 @@
-export function serializeStringToInteger(data: string = null) {
+export function serializeStringToInteger(data?: string) {
+  if (!data) return;
   const numberSerialized = parseInt(data);
   if (numberSerialized) {
-    if (numberSerialized === 0) return null;
+    if (numberSerialized === 0) return;
     return numberSerialized;
   }
-  return null;
+  return;
 }

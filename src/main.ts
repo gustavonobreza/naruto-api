@@ -11,6 +11,6 @@ async function bootstrap() {
   app.register(charactersController, { prefix: '/api/v1/characters' });
   app.register(clansController, { prefix: '/api/v1/clans' });
 
-  await app.listen({ port: +process.env.PORT || 3000 });
+  await app.listen({ port: parseInt(process.env.PORT as string) || 3000 });
 }
 bootstrap();

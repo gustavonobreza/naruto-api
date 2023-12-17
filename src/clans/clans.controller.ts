@@ -1,6 +1,6 @@
+import { FastifyInstance } from 'fastify';
 import { serializeStringToInteger } from '../shared/helper/serialize-string-numeric';
 import { ClansService } from './clans.service';
-import { FastifyInstance } from 'fastify';
 
 interface IQuerystring {
   name?: string;
@@ -32,7 +32,11 @@ export class ClansController {
   }
 }
 
-export function clansController(app: FastifyInstance, opts, done) {
+export function clansController(
+  app: FastifyInstance,
+  _: any,
+  done: () => void,
+) {
   const clans = new ClansController(new ClansService());
   app.get<{ Querystring: IQuerystring }>('/', async (req, reply) => {
     const { name, offset, limit } = req.query;
@@ -43,11 +47,10 @@ export function clansController(app: FastifyInstance, opts, done) {
   app.get('/:id', async (req, reply) => {
     // id = index
     const { id } = req.params as { id?: string };
-    const isIndex = isNaN(parseInt(id));
-    if (!isIndex) {
-      // BadRequest
-      return reply.code(300).send('BadRequest');
-    }
+    if (!id) return reply.code(300).send('BadRequest');
+
+    const isValidIndex = isNaN(parseInt(id));
+    if (!isValidIndex) return reply.code(300).send('BadRequest');
     return clans.findOne(+id);
   });
   done();

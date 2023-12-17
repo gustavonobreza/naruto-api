@@ -36,7 +36,11 @@ type IQuerystring = {
   sort?: string;
 };
 
-export function charactersController(app: FastifyInstance, opts, done) {
+export function charactersController(
+  app: FastifyInstance,
+  _: any,
+  done: () => void,
+) {
   const characters = new CharactersController(new CharactersService());
   app.get<{ Querystring: IQuerystring }>('/', async (req, reply) => {
     const { name, offset, limit, sort } = req.query;
@@ -47,11 +51,10 @@ export function charactersController(app: FastifyInstance, opts, done) {
   app.get('/:id', async (req, reply) => {
     // id = index
     const { id } = req.params as { id?: string };
-    const isIndex = isNaN(parseInt(id));
-    if (!isIndex) {
-      // BadRequest
-      return reply.code(300).send('BadRequest');
-    }
+    if (!id) return reply.code(300).send('BadRequest');
+    // TODO: remove 'parseInt' because if input "123foo-bar" the output is 123 🤷‍♂️
+    const isValidIndex = isNaN(parseInt(id));
+    if (!isValidIndex) return reply.code(300).send('BadRequest');
     return characters.findOne(+id);
   });
   done();

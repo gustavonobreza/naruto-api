@@ -4,37 +4,34 @@ import { data as rawCharacters } from './data/pt/prod-V5b.json';
 import { Clan } from 'src/clans/clan.entity';
 import { data as rawClans } from './data/pt/clans-prod.json';
 
-const cache: {
-  getAllCharacters: Character[];
-  getCharacterById: Character[];
-  getAllClans: Clan[];
-  getClanById: Clan[];
-} = {
-  getAllCharacters: null,
-  getCharacterById: [],
-  getAllClans: null,
-  getClanById: [],
+type ICache = {
+  characters: Character[];
+  characterById: Character[];
+  clans: Clan[];
+  clanById: Clan[];
 };
+
+const cache: ICache = {
+  characters: [...(rawCharacters as any)],
+  characterById: [],
+  clans: [],
+  clanById: [],
+};
+
 export class PtBrService {
   async getAllCharacters(): Promise<Character[]> {
-    if (!cache.getAllCharacters) {
-      cache.getAllCharacters = rawCharacters;
-    }
-
-    return cache.getAllCharacters;
+    return cache.characters;
   }
 
-  async getCharacterById(id: number): Promise<Character> {
-    const userInCache = cache.getCharacterById.find(
-      ({ id: _id }) => _id === id,
-    );
+  async getCharacterById(id: number): Promise<Character | null> {
+    const userInCache = cache.characterById.find(({ id: _id }) => _id === id);
     if (userInCache) return userInCache;
 
     const all = await this.getAllCharacters();
     const user = all.find(({ id: _id }) => _id === id);
 
     if (user) {
-      cache.getCharacterById.push(user);
+      cache.characterById.push(user);
       return user;
     }
 
@@ -42,11 +39,11 @@ export class PtBrService {
   }
 
   async getAllClans(): Promise<Clan[]> {
-    if (!cache.getAllClans) {
-      cache.getAllClans = rawClans;
+    if (!cache.clans) {
+      cache.clans = rawClans;
     }
 
-    return cache.getAllClans;
+    return cache.clans;
   }
 
   async getByPopularity(): Promise<Character[]> {
@@ -58,7 +55,7 @@ export class PtBrService {
       const found = all.find(({ name: _name }) => {
         return _name.toLowerCase().includes(gname.toLowerCase());
       });
-      principles.push(found);
+      found && principles.push(found);
     }
 
     const selected = [
@@ -103,8 +100,8 @@ export class PtBrService {
 
     return principles;
   }
-  async getClanById(id: number): Promise<Clan> {
-    const clanInCache = cache.getClanById.find(({ id: _id }) => _id === id);
+  async getClanById(id: number): Promise<Clan | null> {
+    const clanInCache = cache.clanById.find(({ id: _id }) => _id === id);
     if (clanInCache) {
       return clanInCache;
     }
@@ -113,7 +110,7 @@ export class PtBrService {
     const clan = all.find(({ id: _id }) => _id === id);
 
     if (clan) {
-      cache.getClanById.push(clan);
+      cache.clanById.push(clan);
       return clan;
     }
 
