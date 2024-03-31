@@ -1,8 +1,8 @@
 import cors from '@fastify/cors';
 import fastify from 'fastify';
-import { charactersController } from './api/characters/characters.controller';
-import { clansController } from './api/clans/clans.controller';
-import { homeController } from './api/home.controller';
+import { charactersController } from './api/characters/characters.controller.ts';
+import { clansController } from './api/clans/clans.controller.ts';
+import { homeController } from './api/home.controller.ts';
 
 async function bootstrap() {
   const app = fastify({ logger: true });
@@ -11,6 +11,6 @@ async function bootstrap() {
   app.register(charactersController, { prefix: '/api/v1/characters' });
   app.register(clansController, { prefix: '/api/v1/clans' });
 
-  await app.listen({ port: parseInt(process.env.PORT as string) || 3000 });
+  await app.listen({ port: parseInt(Deno.env.get("PORT") as string) || 3000 });
 }
 bootstrap();

@@ -1,5 +1,5 @@
-import { PtBrService } from '../../shared/pt-br.service';
-import { Clan } from './clan.entity';
+import { PtBrService } from '../../shared/pt-br.service.ts';
+import { Clan } from './clan.entity.ts';
 
 const _offset = 0;
 const _limit = 50;

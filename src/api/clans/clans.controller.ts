@@ -1,6 +1,6 @@
 import { FastifyInstance } from 'fastify';
-import { serializeStringToInteger } from '../../shared/helper/serialize-string-numeric';
-import { ClansService } from './clans.service';
+import { serializeStringToInteger } from '../../shared/helper/serialize-string-numeric.ts';
+import { ClansService } from './clans.service.ts';
 
 interface IQuerystring {
   name?: string;

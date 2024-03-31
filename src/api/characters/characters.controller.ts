@@ -1,6 +1,6 @@
 import { FastifyInstance } from 'fastify';
-import { serializeStringToInteger } from '../../shared/helper/serialize-string-numeric';
-import { CharactersService, IQuery } from './characters.service';
+import { serializeStringToInteger } from '../../shared/helper/serialize-string-numeric.ts';
+import { CharactersService, IQuery } from './characters.service.ts';
 
 export class CharactersController {
   constructor(private readonly charactersService: CharactersService) {}

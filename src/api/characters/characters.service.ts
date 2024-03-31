@@ -1,5 +1,5 @@
-import { PtBrService as PTService } from '../../shared/pt-br.service';
-import { Character } from './character.entity';
+import { PtBrService as PTService } from '../../shared/pt-br.service.ts';
+import { Character } from './character.entity.ts';
 
 const _offset = 0;
 const _limit = 50;

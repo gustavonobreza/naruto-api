@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["Boruto", "Narutopedia"]
+  "cSpell.words": [
+    "Boruto",
+    "Narutopedia"
+  ],
+  "deno.enable": true
 }

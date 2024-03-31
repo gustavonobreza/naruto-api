@@ -1,8 +1,11 @@
-import { Character } from '../api/characters/character.entity';
-import { data as rawCharacters } from './data/pt/characters.json';
+import { Character } from '../api/characters/character.entity.ts';
+import dataC from './data/pt/characters.json' with { type: 'json' };
 
-import { Clan } from 'src/api/clans/clan.entity';
-import { data as rawClans } from './data/pt/clans.json';
+const rawCharacters = dataC.data;
+
+import { Clan } from '../api/clans/clan.entity.ts';
+import dataCl from './data/pt/clans.json' with { type: 'json' };
+const rawClans = dataCl.data;
 
 type ICache = {
   characters: Character[];
