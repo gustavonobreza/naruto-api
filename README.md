@@ -12,8 +12,7 @@
   </a>
 </p>
 
-<p align="center"> <img src="./docs/assets/caution.png" alt="caution" width="150px"/> </p>
-<b>The project was changed from Heroku to Render !!! <br> Outdated link --> <a>https://naruto-api.heroku.app/api</a> /// new link --> <a>https://naruto-api-rsl3.onrender.com/</a></b>
+**The project was changed from Heroku to Render !!! <br> Outdated link --> <a>https://naruto-api.heroku.app/api</a> /// new link --> <a>https://naruto-api-rsl3.onrender.com/</a>**
 
 ## Description
 
