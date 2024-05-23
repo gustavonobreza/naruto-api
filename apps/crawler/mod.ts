@@ -1,3 +1,3 @@
-export default function(){
-    throw new Error("Not implemented");
+export function execute() {
+  throw new Error("Not implemented");
 }
