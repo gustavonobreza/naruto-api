@@ -1,5 +1,9 @@
 {
-    "name": "@naruto/crawler",
-    "version": "0.0.1",
-    "exports": "./mod.ts"
+  "name": "@naruto/crawler",
+  "version": "0.0.1",
+  "exports": "./mod.ts",
+  "imports": {
+    "puppeteer": "npm:puppeteer@^22.9.0"
+  },
+  "nodeModulesDir": true
 }
