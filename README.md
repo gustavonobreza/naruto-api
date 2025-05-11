@@ -9,7 +9,7 @@ API to fetch data about Naruto (and Boruto) anime and manga. With a short resume
 
 ## Deploy
 
-It's deployed on Render: <a href="https://naruto-api.gustanobre.com.br" target="_blank" >https://naruto-api.gustanobre.com.br/</a>
+It's deployed on: <a href="https://naruto-api.gustanobre.com.br" target="_blank" >https://naruto-api.gustanobre.com.br/</a>
 
 ## Links
 
