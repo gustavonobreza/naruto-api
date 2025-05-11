@@ -1,18 +1,7 @@
 <p align="center">
   <a href="https://nodejs.org/en/" target="_blank"> <img alt="NodeJS" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/nodejs/nodejs-original.svg"/></a>
+</p> 
 
-  <!-- <a target="_blank" href="https://www.typescriptlang.org/" target="_blank"> <img alt="TypeScript" width="100px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/typescript/typescript-original.svg"/></a>
-  <a href="https://fly.io/" target="_blank"> <img alt="FlyIO" width="100px" src="./docs/assets/fly-io.svg"/></a>
-</p> -->
-
-<p align="center">
-    <img src="https://ci.appveyor.com/api/projects/status/github/gustavonobreza/naruto-api?svg=true" alt="Build status: Passing" />
-  <a href="https://github.com/gustavonobreza/naruto-api/actions" alt="Build status: Passing">
-    <img src="https://github.com/gustavonobreza/naruto-api/actions/workflows/node.js.yml/badge.svg" alt="Build status: Passing">
-  </a>
-</p>
-
-**The project was changed from Heroku to Render !!! <br> Outdated link --> <a>https://naruto-api.heroku.app/api</a> /// new link --> <a>https://naruto-api-rsl3.onrender.com/</a>**
 
 ## Description
 
@@ -20,7 +9,7 @@ API to fetch data about Naruto (and Boruto) anime and manga. With a short resume
 
 ## Deploy
 
-It's deployed on Render: <a href="https://naruto-api-rsl3.onrender.com/" target="_blank" >https://naruto-api-rsl3.onrender.com/</a>
+It's deployed on Render: <a href="https://naruto-api.gustanobre.com.br" target="_blank" >https://naruto-api.gustanobre.com.br/</a>
 
 ## Links
 
