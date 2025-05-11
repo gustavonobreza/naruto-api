@@ -4,8 +4,6 @@
 ARG NODE_VERSION=22.6.0
 FROM node:${NODE_VERSION}-slim as base
 
-LABEL fly_launch_runtime="Node.js"
-
 # Node.js app lives here
 WORKDIR /app
 
@@ -15,7 +13,6 @@ ENV NODE_ENV="production"
 # Install pnpm
 ARG PNPM_VERSION=9.7.0
 RUN npm install -g pnpm@$PNPM_VERSION
-
 
 # Throw-away build stage to reduce size of final image
 FROM base as build
@@ -36,7 +33,6 @@ RUN pnpm run build
 
 # Remove development dependencies
 RUN pnpm prune --prod
-
 
 # Final stage for app image
 FROM base

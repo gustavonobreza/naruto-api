@@ -28,14 +28,12 @@ pnpm install
 ## Running the app
 
 ```bash
-# development
+# start
 $ pnpm start
 
 # watch mode
 $ pnpm start:dev
 
-# production mode
-$ pnpm start:prod
 ```
 
 ## Test
