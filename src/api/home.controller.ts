@@ -1,8 +1,8 @@
-import { FastifyInstance } from 'fastify';
+import type { FastifyInstance } from "fastify";
 
 export function homeController(app: FastifyInstance, _: any, done: any) {
-  app.get('/', (_, reply) => {
-    reply.redirect(303, 'api/v1/characters');
-  });
-  done();
+	app.get("/", (_, reply) => {
+		reply.redirect("api/v1/characters", 303);
+	});
+	done();
 }
